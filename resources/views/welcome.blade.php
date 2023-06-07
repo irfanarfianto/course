@@ -1,0 +1,9 @@
+@extends('layouts.app')
+@section('content')
+    @include('layouts.hero')
+    @include('layouts.rekomendasi')
+    @include('layouts.course')
+    @include('layouts.ads')
+    @include('layouts.testi')
+    @include('layouts.testi2')
+@endsection
