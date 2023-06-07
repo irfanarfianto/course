@@ -28,3 +28,9 @@ Route::resource('admin', App\Http\Controllers\AdminKursusController::class)->mid
 
 // kategori
 Route::resource('category', App\Http\Controllers\CategoryController::class)->middleware('isLogin');
+
+Route::prefix('pengajar')->group(function () {
+    Route::get('dashboard', [\App\Http\Controllers\Pengajar\PengajarController::class, 'index'])->name('dashboard');
+
+    Route::resource('dashboard/courses', \App\Http\Controllers\Pengajar\PengajarCoursesController::class);
+});
