@@ -9,32 +9,31 @@
             <!-- Logo END -->
 
             <!-- Responsive navbar toggler -->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Main navbar START -->
-            <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+            <div class="navbar-collapse w-100 collapse align-items-center" id="navbarCollapse">
                 <!-- Nav Main menu START -->
                 <ul class="navbar-nav navbar-nav-scroll ms-auto">
                     <!-- Nav item 1 Beranda -->
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::url() === url('/') ? 'active' : '' }}"
+                        <a class="nav-link fw-semibold {{ Request::url() === url('/') ? 'active' : '' }}"
                             href="{{ url('/') }}">Beranda</a>
                     </li>
                     <!-- Nav item 1 Kategori -->
                     <li class="nav-item dropdown dropdown-menu-shadow-stacked">
-                        <a class="nav-link dropdown-toggle" href="{{ url('category') }}" id="categoryMenu"
+                        <a class="nav-link fw-semibold dropdown-toggle" href="{{ url('category') }}" id="categoryMenu"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori</a></a>
                         <ul class="dropdown-menu" aria-labelledby="categoryMenu">
                             <!-- Dropdown submenu -->
-                            <li class="dropdown-submenu dropend">
+                            <li class="dropdown-submenu dropstart">
                                 <a class="dropdown-item dropdown-toggle" href="{{ url('category') }}">Development</a>
                                 <ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
                                     <!-- dropdown submenu open right -->
-                                    <li class="dropdown-submenu dropend">
+                                    <li class="dropdown-submenu start">
                                         <a class="dropdown-item dropdown-toggle" href="#">Web
                                             Development</a>
                                         <ul class="dropdown-menu" data-bs-popper="none">
@@ -61,7 +60,7 @@
                             </li>
                             <li> <a class="dropdown-item" href="#">Design</a></li>
                             <!-- Dropdown submenu -->
-                            <li class="dropdown-submenu dropend">
+                            <li class="dropdown-submenu dropstart">
                                 <a class="dropdown-item dropdown-toggle" href="#">Marketing</a>
                                 <div class="dropdown-menu dropdown-menu-start dropdown-width-lg" data-bs-popper="none">
                                     <div class="row p-4">
@@ -156,17 +155,16 @@
                     </li>
 
                     <li class=nav-item>
-                        <a class="nav-link {{ Request::url() === url('/tentangkami') ? 'active' : '' }}"
+                        <a class="nav-link fw-semibold {{ Request::url() === url('/tentangkami') ? 'active' : '' }}"
                             href="{{ url('/tentangkami') }}">Tentang Kami</a>
                     </li>
 
                     <li class=nav-item>
-                        <a class="nav-link {{ Request::url() === url('/promo') ? 'active' : '' }}"
+                        <a class="nav-link fw-semibold {{ Request::url() === url('/promo') ? 'active' : '' }}"
                             href="{{ url('/promo') }}"><i class="ri-price-tag-3-fill"></i> Promo</a>
                     </li>
-                </ul>
-                <!-- Nav Main menu END -->
-                {{-- <div class="nav-item gap-2 ms-auto d-flex">
+                    <!-- Nav Main menu END -->
+                    {{-- <div class="nav-item gap-2 ms-auto d-flex">
                         @guest
                             @if (Route::has('login'))
                                 <button href="#" title="login" class="btn btn-outline-primary rounded-pill"
@@ -197,26 +195,26 @@
                             </li>
                         @endguest
                     </div> --}}
-                <ul class="navbar-nav ms-auto gap-2 d-flex">
                     <!-- Authentication Links -->
                     @guest
                         @if (Route::has('login'))
                             <li class="nav-item">
-                                <a href="{{ url('/login') }}" title="login"
-                                    class="btn btn-outline-primary rounded-pill">Login</a>
+                                <a href="{{ url('/login') }}" title="login" class="btn nav-link border-0 fw-semibold">Login</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="nav-item">
                                 <a href="{{ url('/register') }}" title="register"
-                                    class="btn btn-primary rounded-pill">Daftar</a>
+                                    class="btn btn-primary text-white rounded-pill fw-semibold">Daftar</a>
                             </li>
                         @endif
                     @else
                         <li class="dropdown">
-                            <a id="navbarDropdown" class="dropdown-toggle nav-link" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="dropdown-toggle nav-link fw-semibold" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                v-pre>
+                                {{ Auth::user()->username }}
                                 @if (Auth::user()->profile_photo_url)
                                     <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->username }}"
                                         class="profile-image">
@@ -224,7 +222,6 @@
                                     <img src="{{ asset('images/fp.webp') }}" alt="Default Profile"
                                         class="profile-image avatar rounded-circle avatar-sm">
                                 @endif
-                                {{ Auth::user()->username }}
                             </a>
 
                             <ul class="dropdown-menu dropdown-menu-sm-start" aria-labelledby="navbarDropdown">

@@ -1,21 +1,32 @@
 <div class="container my-3">
     <div class="row">
-        <div class="px-2 px-sm-4 rounded-2 bg-purple">
-            <!-- Action box -->
-            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-between">
-                <!-- Foto -->
-                <figure class="text-center text-sm-start mb-3 mb-sm-0">
-                    <img src="{{ asset('images/ads.png') }}" alt="image-ads" class="img-fluid d-block"
-                        style="max-width: 300px; height: auto;">
-                </figure>
-                <!-- Teks -->
-                <div class="p-3">
-                    <h6 class="text-white text-uppercase">Promo</h6>
-                    <h3 class="text-white mb-3 mb-lg-0"><strong>Nikmati Diskon 40%</strong> spesial lebaran,
-                        Lorem ipsum dolor sit amet.</h3>
-                    <a href="#" class="btn btn-outline-warning mb-0 rounded-pill mt-3">Dapatkan <i
-                            class="bi bi-arrow-right"></i></a>
+        <div class="col-lg-5 justify-content-center">
+            <h2>Latest Products</h2>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="col-lg-7">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="https://placehold.it/250x100" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="https://placehold.it/250x100" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://placehold.it/250x100" class="d-block w-100" alt="...">
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
