@@ -15,7 +15,7 @@ class PengajarCoursesController extends Controller
     {
         // $courses = Courses::where('pengajar_id', auth()->user()->id)->get();
         $courses = Courses::all();
-        return view('Pengajar.dashboard.courses.index', compact('courses'));
+        return view('Pengajar.courses.index', compact('courses'));
     }
 
     /**

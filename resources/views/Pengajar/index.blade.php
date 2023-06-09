@@ -48,7 +48,7 @@
             <div class="container">
                 <div class="row">
                     @include('pengajar.component.offcanvas')
-
+                    
                     <div class="col-xl-9">
                         @yield('content')
                     </div>

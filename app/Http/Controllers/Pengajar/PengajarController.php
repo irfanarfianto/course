@@ -13,7 +13,7 @@ class PengajarController extends Controller
      */
     public function index()
     {
-        return view('Pengajar.dashboard.index');
+        return view('Pengajar.index');
     }
 
 
