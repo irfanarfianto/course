@@ -43,9 +43,11 @@
 
 <body class="antialiased">
     @include('layouts.navbar')
+
     <main>
         @yield('content')
     </main>
+
     <footer>
         @include('layouts.footer')
     </footer>
@@ -73,7 +75,7 @@
     <script src="https://kit.fontawesome.com/24349534ef.js" crossorigin="anonymous"></script>
 
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('.tab-kursus, .rekomendasi, .pengajar').owlCarousel({
             loop: true,
             margin: 18,
             responsiveClass: true,
@@ -90,6 +92,32 @@
                     items: 5,
                     nav: true,
                     loop: false
+                }
+            }
+        })
+    </script>
+    <script>
+        $('#promo').owlCarousel({
+            loop: true,
+            stagePadding: 50,
+            responsiveClass: true,
+            margin:10,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: true,
+                    loop: true
+                },
+                1000: {
+                    items: 1,
+                    nav: false,
+                    loop: true
                 }
             }
         })

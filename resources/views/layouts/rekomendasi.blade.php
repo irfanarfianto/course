@@ -1,11 +1,16 @@
 <div class="bg-primary bg-opacity-10 py-4">
     <div class="container my-3">
         <div class="justify-content-between d-flex align-items-center">
-            <h4 class="title p-2"><span class="text-puIDRle">Rekomendasi</span> kursus untukmu ❤️</h4>
-            <a href="" class="text-puIDRle"><i class="ri-arrow-right-up-line"></i> Lebih banyak</i></a>
+            <div>
+                <h4 class="title"><span class="text-purple">Rekomendasi</span> kursus untukmu ❤️</h4>
+                <p>
+                    Cek rekomendasi kursus yang cocok untukmu, kuy! 
+                </p>
+            </div>
+            <a href="" class="text-purple"><i class="ri-arrow-right-up-line"></i> Lebih banyak</i></a>
         </div>
         <div class="row">
-            <div class="col-md-12 owl-carousel owl-theme">
+            <div class="col-md-12 owl-carousel owl-theme rekomendasi">
                 {{-- 1 --}}
                 <div class="card border-2">
                     <div class="position-relative">

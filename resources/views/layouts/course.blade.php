@@ -5,7 +5,7 @@
             <div>
                 <h4 class="title"><span class="text-puIDRle">Kategori terpopuler ✨</h4>
                 <p>
-                    <span class="text-puIDRle">Kursus terpopuler di Oncourse</span>
+                    <span class="text-puIDRle">Kursus yang kami rekomendasikan untukmu berdasarkan minat dan bakat yang kamu pilih.</span>
                 </p>
             </div>
         </div>
@@ -17,9 +17,9 @@
             role="tablist">
             <!-- Tab item -->
             <li class="nav-item" role="presentation">
-                <button class="nav-link mb-2 mb-md-1 rounded-pill active" id="kursus-pills-tab-3" data-bs-toggle="pill"
+                <button class="nav-link mb-2 mb-md-1 active rounded-pill" id="kursus-pills-tab-1" data-bs-toggle="pill"
                     data-bs-target="#kursus-pills-tabs-1" type="button" role="tab"
-                    aria-controls="kursus-pills-tabs-1" aria-selected="true" tabindex="-1">Development</button>
+                    aria-controls="kursus-pills-tabs-1" aria-selected="true">Development</button>
             </li>
             <!-- Tab item -->
             <li class="nav-item" role="presentation">
@@ -67,7 +67,7 @@
             </li>
         </ul>
         <!-- Tabs END -->
-        <a href="" class="text-puIDRle"><i class="ri-arrow-right-up-line"></i> Lebih banyak</i></a>
+        <a href="" class="text-purple"><i class="ri-arrow-right-up-line"></i> Lebih banyak</i></a>
     </div>
 
     <!-- Tabs content START -->
@@ -76,7 +76,7 @@
         <div class="tab-pane fade active show" id="kursus-pills-tabs-1" role="tabpanel"
             aria-labelledby="kursus-pills-tab-1">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -138,7 +138,7 @@
         <!-- Content START -->
         <div class="tab-pane fade" id="kursus-pills-tabs-2" role="tabpanel" aria-labelledby="kursus-pills-tab-2">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -200,7 +200,7 @@
         <!-- Content START -->
         <div class="tab-pane fade" id="kursus-pills-tabs-3" role="tabpanel" aria-labelledby="kursus-pills-tab-3">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -262,7 +262,7 @@
         <!-- Content START -->
         <div class="tab-pane fade" id="kursus-pills-tabs-4" role="tabpanel" aria-labelledby="kursus-pills-tab-4">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -321,7 +321,7 @@
         </div>
         <div class="tab-pane fade" id="kursus-pills-tabs-5" role="tabpanel" aria-labelledby="kursus-pills-tab-5">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -380,7 +380,7 @@
         </div>
         <div class="tab-pane fade" id="kursus-pills-tabs-6" role="tabpanel" aria-labelledby="kursus-pills-tab-6">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -439,7 +439,7 @@
         </div>
         <div class="tab-pane fade" id="kursus-pills-tabs-7" role="tabpanel" aria-labelledby="kursus-pills-tab-7">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">
@@ -498,7 +498,7 @@
         </div>
         <div class="tab-pane fade" id="kursus-pills-tabs-8" role="tabpanel" aria-labelledby="kursus-pills-tab-8">
             <div class="row">
-                <div class="col-md-12 owl-carousel owl-theme">
+                <div class="col-md-12 owl-carousel owl-theme tab-kursus">
                     {{-- 1 --}}
                     <div class="card border-2">
                         <div class="position-relative">

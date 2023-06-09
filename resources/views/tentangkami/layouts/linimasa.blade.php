@@ -21,11 +21,12 @@
             </ul>
         </div>
         <div class="col-md-8">
-            <div class="owl-carousel owl-theme d-flex justify-content-center">
+            @include('tentangkami.layouts.ads')
+            <div class="owl-carousel owl-theme justify-content-center pengajar my-2">
                 <div class="justify-content-center text-center">
                     <div class="align-items-center">
                         <!-- Avatar -->
-                        <div class="avatar avatar-xxxl">
+                        <div class="avatar avatar-xxl">
                             <img class="avatar-img rounded"
                                 src="https://images.unsplash.com/photo-1503235930437-8c6293ba41f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                                 alt="avatar">
@@ -44,7 +45,7 @@
                 <div class="justify-content-center text-center">
                     <div class="align-items-center">
                         <!-- Avatar -->
-                        <div class="avatar avatar-xxxl">
+                        <div class="avatar avatar-xxl">
                             <img class="avatar-img rounded"
                                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                                 alt="avatar">
@@ -63,7 +64,7 @@
                 <div class="justify-content-center text-center">
                     <div class="align-items-center">
                         <!-- Avatar -->
-                        <div class="avatar avatar-xxxl">
+                        <div class="avatar avatar-xxl">
                             <img class="avatar-img rounded"
                                 src="https://images.unsplash.com/photo-1503235930437-8c6293ba41f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                                 alt="avatar">
@@ -82,7 +83,7 @@
                 <div class="justify-content-center text-center">
                     <div class="align-items-center">
                         <!-- Avatar -->
-                        <div class="avatar avatar-xxxl">
+                        <div class="avatar avatar-xxl">
                             <img class="avatar-img rounded"
                                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                                 alt="avatar">
@@ -101,7 +102,7 @@
                 <div class="justify-content-center text-center">
                     <div class="align-items-center">
                         <!-- Avatar -->
-                        <div class="avatar avatar-xxxl">
+                        <div class="avatar avatar-xxl">
                             <img class="avatar-img rounded"
                                 src="https://images.unsplash.com/photo-1503235930437-8c6293ba41f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                                 alt="avatar">
@@ -120,7 +121,7 @@
                 <div class="justify-content-center text-center">
                     <div class="align-items-center">
                         <!-- Avatar -->
-                        <div class="avatar avatar-xxxl">
+                        <div class="avatar avatar-xxl">
                             <img class="avatar-img rounded"
                                 src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
                                 alt="avatar">
