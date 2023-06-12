@@ -5,7 +5,8 @@
             <div>
                 <h4 class="title"><span class="text-puIDRle">Kategori terpopuler ✨</h4>
                 <p>
-                    <span class="text-puIDRle">Kursus yang kami rekomendasikan untukmu berdasarkan minat dan bakat yang kamu pilih.</span>
+                    <span class="text-puIDRle">Kursus yang kami rekomendasikan untukmu berdasarkan minat dan bakat yang
+                        kamu pilih.</span>
                 </p>
             </div>
         </div>
@@ -67,7 +68,8 @@
             </li>
         </ul>
         <!-- Tabs END -->
-        <a href="" class="text-purple"><i class="ri-arrow-right-up-line"></i> Lebih banyak</i></a>
+        <a href="" class="text-purple nav-link mb-2 mb-md-1"><i class="ri-arrow-right-up-line"></i> Lebih
+            banyak</i></a>
     </div>
 
     <!-- Tabs content START -->

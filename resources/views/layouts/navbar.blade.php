@@ -2,17 +2,20 @@
     <!-- Nav START -->
     <nav class="navbar navbar-expand-xl">
         <div class="container px-3">
+            <!-- Responsive navbar toggler -->
+            <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navigasi Toggle">
+                <span class="navbar-toggler-animation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
             <!-- Logo START -->
             <a class="navbar-brand fw-bold" href="/">
                 <i class="ri-graduation-cap-fill"></i> Oncourse
             </a>
             <!-- Logo END -->
-
-            <!-- Responsive navbar toggler -->
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
             <!-- Main navbar START -->
             <div class="navbar-collapse w-100 collapse align-items-center" id="navbarCollapse">
@@ -163,8 +166,9 @@
                         <a class="nav-link fw-semibold {{ Request::url() === url('/promo') ? 'active' : '' }}"
                             href="{{ url('/promo') }}"><i class="ri-price-tag-3-fill"></i> Promo</a>
                     </li>
-                    <!-- Nav Main menu END -->
-                    {{-- <div class="nav-item gap-2 ms-auto d-flex">
+                </ul>
+                <!-- Nav Main menu END -->
+                {{-- <div class="nav-item gap-2 ms-auto d-flex">
                         @guest
                             @if (Route::has('login'))
                                 <button href="#" title="login" class="btn btn-outline-primary rounded-pill"
@@ -195,56 +199,6 @@
                             </li>
                         @endguest
                     </div> --}}
-                    <!-- Authentication Links -->
-                    @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a href="{{ url('/login') }}" title="login" class="btn nav-link border-0 fw-semibold">Login</a>
-                            </li>
-                        @endif
-
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a href="{{ url('/register') }}" title="register"
-                                    class="btn btn-primary text-white rounded-pill fw-semibold">Daftar</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="dropdown">
-                            <a id="navbarDropdown" class="dropdown-toggle nav-link fw-semibold" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                v-pre>
-                                {{ Auth::user()->username }}
-                                @if (Auth::user()->profile_photo_url)
-                                    <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->username }}"
-                                        class="profile-image">
-                                @else
-                                    <img src="{{ asset('images/fp.webp') }}" alt="Default Profile"
-                                        class="profile-image avatar rounded-circle avatar-sm">
-                                @endif
-                            </a>
-
-                            <ul class="dropdown-menu dropdown-menu-sm-start" aria-labelledby="navbarDropdown">
-                                <li><button class="dropdown-item" type="button">Profile</button></li>
-                                <li><button class="dropdown-item" type="button">Pengaturan</button></li>
-                                <li><button class="dropdown-item" type="button">Sertifikat saya</button></li>
-                                <hr>
-                                <button class="dropdown-item bg-danger-soft-hover fw-bold text-red"
-                                    href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                    <i class="ri-logout-box-r-fill"></i>
-                                </button>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </ul>
-                        </li>
-
-                    @endguest
-                </ul>
 
                 <div class="watermark">
                     <!-- buatkan tampilan prisented by -->
@@ -263,6 +217,52 @@
                     </div>
                 </div>
             </div>
+            @guest
+                @if (Route::has('login'))
+                    <div class="navbar-nav d-lg-inline-block">
+                        <a href="{{ url('/login') }}" title="login"
+                            class="btn btn-outline-primary rounded-pill fw-semibold">Login</a>
+                    </div>
+                @endif
+
+                {{-- @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a href="{{ url('/register') }}" title="register"
+                                    class="btn btn-primary text-white rounded-pill fw-semibold">Daftar</a>
+                            </li>
+                        @endif --}}
+            @else
+                <div class="dropdown ms-3">
+                    <a id="navbarDropdown" class="nav-link fw-semibold d-flex" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->username }}
+                        @if (Auth::user()->profile_photo_url)
+                            <img src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->username }}"
+                                class="profile-image ms-2">
+                        @else
+                            <img src="{{ asset('images/fp.webp') }}" alt="Default Profile"
+                                class="profile-image avatar rounded-circle avatar-sm ms-2">
+                        @endif
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-sm-start dropstart" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" type="button" href="{{ route('profile') }}">Profile</a></li>
+                        <li><a class="dropdown-item" type="button" href="#">Pengaturan</a></li>
+                        <li><a class="dropdown-item" type="button" href="#">Sertifikat saya</a></li>
+                        <hr>
+                        <button class="dropdown-item bg-danger-soft-hover fw-bold text-red" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                            <i class="ri-logout-box-r-fill"></i>
+                        </button>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </ul>
+                </div>
+            @endguest
         </div>
     </nav>
     <!-- Nav END -->

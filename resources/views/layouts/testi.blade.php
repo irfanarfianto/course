@@ -2,7 +2,7 @@
     <div class="row g-4">
         <div class="col-lg-5">
             <!-- Image -->
-            <img src="{{ asset('/images/3d.png') }}" width="600" height="600" class="rounded-2 img-fluid"
+            <img src="{{ asset('/images/08.png') }}" width="600" height="600" class="rounded-2 img-fluid"
                 alt="foto-alasan">
         </div>
         <div class="col-lg-7">
