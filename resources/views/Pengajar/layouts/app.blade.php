@@ -41,7 +41,7 @@
 </head>
 
 <body class="antialiased">
-    @include('layouts.navbar')
+    @include('pengajar.layouts.navbar')
     <main>
         @include('pengajar.dashboard.bennerprofile')
         <section class="pt-0">

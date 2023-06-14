@@ -12,13 +12,13 @@
                 </span>
             </button>
             <!-- Logo START -->
-            <a class="navbar-brand fw-bold" href="/">
+            <a class="navbar-brand fw-bold" href="">
                 <i class="ri-graduation-cap-fill"></i> Oncourse
             </a>
             <!-- Logo END -->
 
             <!-- Main navbar START -->
-            <div class="navbar-collapse w-100 collapse align-items-center" id="navbarCollapse">
+            {{-- <div class="navbar-collapse w-100 collapse align-items-center" id="navbarCollapse">
                 <!-- Nav Main menu START -->
                 <ul class="navbar-nav navbar-nav-scroll ms-auto">
                     <!-- Nav item 1 Beranda -->
@@ -216,7 +216,7 @@
                                 class="bi bi-youtube"></i></a>
                     </div>
                 </div>
-            </div>
+            {{-- </div> --}}
             @guest
                 @if (Route::has('login'))
                     <div class="navbar-nav d-lg-inline-block">
