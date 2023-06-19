@@ -1,7 +1,7 @@
 <div class="container my-5">
     <div class="row">
         <div class="col-lg-5 justify-content-center">
-            <h2>Cek promo sebelum mengikuti kursus, kuy! 🎉</h2>
+            <h3>Cek promo sebelum mengikuti kursus, kuy! 🎉</h3>
             <a href="" class="fw-semibold text-purple">Lihat Semua Promo <i
                     class="ri-arrow-right-line"></i></a>
         </div>

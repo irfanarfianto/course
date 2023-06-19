@@ -13,8 +13,8 @@
             <div class="bg-dark border rounded-3 pb-0 p-3 w-100">
                 <!-- Dashboard menu -->
                 <div class="list-group list-group-dark list-group-borderless">
-                    <a class="list-group-item {{ request()->is('instructor-dashboard*') ? 'active' : '' }}"
-                        href="{{ url('instructor-dashboard') }}"><i
+                    <a class="list-group-item {{ request()->is('pengajar/dashboard*') ? 'active' : '' }}"
+                        href="{{ url('pengajar/dashboard') }}"><i
                             class="bi bi-ui-checks-grid fa-fw me-2"></i>Dashboard</a>
                     <a class="list-group-item {{ request()->is('pengajar/courses*') ? 'active' : '' }}"
                         href="{{ url('pengajar/courses') }}"><i class="bi bi-basket fa-fw me-2"></i>My Courses</a>

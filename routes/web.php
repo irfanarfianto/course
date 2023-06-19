@@ -24,19 +24,20 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/tentangkami', [App\Http\Controllers\TentangKamiController::class, 'index'])->name('tentangkami');
 
 // kategori
-Route::resource('category', App\Http\Controllers\CategoryController::class)->middleware('isLogin');
+Route::resource('category', App\Http\Controllers\CategoryController::class)->only(['index', 'show']);
 
-Route::prefix('pengajar')->group(
+Route::prefix('pengajar')->middleware('role:pengajar')->group(
     function () {
-        Route::middleware('role:pengajar')->get('dashboard', [\App\Http\Controllers\Pengajar\PengajarController::class, 'index'])->name('dashboard');
-        Route::get('courses', [\App\Http\Controllers\Pengajar\PengajarCoursesController::class, 'index'])->name('coursus-list');
+        Route::get('dashboard', [\App\Http\Controllers\Pengajar\PengajarController::class, 'index'])->name('dashboard');
+        Route::get('courses', [\App\Http\Controllers\Pengajar\PengajarCoursesController::class, 'index'])->name('courses-list');
     }
 );
 
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 
-Route::prefix('siswa')->group(
+Route::prefix('siswa')->middleware('role:siswa')->group(
     function () {
-        Route::middleware('role:siswa')->get('home', [\App\Http\Controllers\Siswa\SiswaController::class, 'index'])->name('home');
+        Route::get('home', [\App\Http\Controllers\Siswa\SiswaController::class, 'index'])->name('home');
+        Route::get('category', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category-list');
     }
 );
