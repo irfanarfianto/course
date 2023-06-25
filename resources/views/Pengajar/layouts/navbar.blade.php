@@ -2,14 +2,9 @@
     <!-- Nav START -->
     <nav class="navbar navbar-expand-xl">
         <div class="container px-3">
-            <!-- Responsive navbar toggler -->
-            <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navigasi Toggle">
-                <span class="navbar-toggler-animation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+            <button class="btn btn-primary d-xl-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">
+                <i class="fas fa-sliders-h"></i>
             </button>
             <!-- Logo START -->
             <a class="navbar-brand fw-bold" href="">
@@ -199,23 +194,6 @@
                             </li>
                         @endguest
                     </div> --}}
-
-                <div class="watermark">
-                    <!-- buatkan tampilan prisented by -->
-                    <p style="text-align: center;"><small>Presented by</small><br><strong>Kelompok
-                            5</strong>
-                    </p>
-                    <div class="d-flex justify-content-center align-items-center mb-3">
-                        <a href="#" class="text-decoration-none text-dark social-icon me-3"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-decoration-none text-dark social-icon me-3"><i
-                                class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-decoration-none text-dark social-icon me-3"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-decoration-none text-dark social-icon me-3"><i
-                                class="bi bi-youtube"></i></a>
-                    </div>
-                </div>
             {{-- </div> --}}
             @guest
                 @if (Route::has('login'))

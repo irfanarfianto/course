@@ -44,7 +44,7 @@
                             </div>
                             <!-- Button -->
                             <div class="d-flex align-items-center mt-2 mt-md-0">
-                                <a href="instructor-create-course.html" class="btn btn-success mb-0">Create a course</a>
+                                <a href="{{ route('courses-create') }}" class="btn btn-success mb-0">Tambah Kursus</a>
                             </div>
                         </div>
                     </div>

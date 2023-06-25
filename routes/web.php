@@ -30,6 +30,8 @@ Route::prefix('pengajar')->middleware('role:pengajar')->group(
     function () {
         Route::get('dashboard', [\App\Http\Controllers\Pengajar\PengajarController::class, 'index'])->name('dashboard');
         Route::get('courses', [\App\Http\Controllers\Pengajar\PengajarCoursesController::class, 'index'])->name('courses-list');
+        Route::get('courses/create', [\App\Http\Controllers\Pengajar\PengajarCoursesController::class, 'create'])->name('courses-create');
+        Route::post('courses', [\App\Http\Controllers\Pengajar\PengajarCoursesController::class, 'store'])->name('courses-store');
     }
 );
 

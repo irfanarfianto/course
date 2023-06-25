@@ -22,22 +22,26 @@
                         href="{{ url('instructor-earning') }}"><i class="bi bi-graph-up fa-fw me-2"></i>Earnings</a>
                     <a class="list-group-item {{ request()->is('instructor-studentlist*') ? 'active' : '' }}"
                         href="{{ url('instructor-studentlist') }}"><i class="bi bi-people fa-fw me-2"></i>Students</a>
-                    <a class="list-group-item {{ request()->is('instructor-order*') ? 'active' : '' }}"
-                        href="{{ url('instructor-order') }}"><i class="bi bi-folder-check fa-fw me-2"></i>Orders</a>
                     <a class="list-group-item {{ request()->is('instructor-review*') ? 'active' : '' }}"
                         href="{{ url('instructor-review') }}"><i class="bi bi-star fa-fw me-2"></i>Reviews</a>
                     <a class="list-group-item {{ request()->is('instructor-edit-profile*') ? 'active' : '' }}"
                         href="{{ url('instructor-edit-profile') }}"><i class="bi bi-pencil-square fa-fw me-2"></i>Edit
                         Profile</a>
-                    <a class="list-group-item {{ request()->is('instructor-payout*') ? 'active' : '' }}"
-                        href="{{ url('instructor-payout') }}"><i class="bi bi-wallet2 fa-fw me-2"></i>Payouts</a>
                     <a class="list-group-item {{ request()->is('instructor-setting*') ? 'active' : '' }}"
                         href="{{ url('instructor-setting') }}"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
                     <a class="list-group-item {{ request()->is('instructor-delete-account*') ? 'active' : '' }}"
                         href="{{ url('instructor-delete-account') }}"><i class="bi bi-trash fa-fw me-2"></i>Delete
                         Profile</a>
-                    <a class="list-group-item text-danger bg-danger-soft-hover" href="{{ url('sign-in') }}"><i
-                            class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
+                    <a class="list-group-item text-danger bg-danger-soft-hover" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();"><i
+                            class="fas fa-sign-out-alt fa-fw me-2"></i>
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
 
             </div>
